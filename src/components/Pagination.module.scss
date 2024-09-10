@@ -1,0 +1,30 @@
+.self {
+  border-top: 1px solid #eee;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  padding: 1rem;
+
+  li {
+
+    button {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      color: #444;
+      cursor: pointer;
+      padding: 4px 8px;
+    }
+    
+    // active button
+    &[data-active=true] button {
+      background: #444;
+      border-color: #444;
+      color: #fff;
+    }
+
+    &:not(:last-child) { margin-right: .5rem; }
+  }
+
+}

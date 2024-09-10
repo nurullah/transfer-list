@@ -1,4 +1,7 @@
-.self {}
+.self {
+  display: flex;
+  flex-direction: column;
+}
 
 .form {
   display: flex;
@@ -32,9 +35,6 @@
 }
 
 .list {
-  list-style-type: none;
-  list-style-position: unset;
-  margin: 0;
   padding: 0 0 1rem;
 
   li {

@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 // UI
 import styles from './CheckboxList.module.scss';
 import { PlusIcon } from './Icons';
+import Pagination from './Pagination';
 
 function CheckboxList({
   data,
@@ -12,6 +14,12 @@ function CheckboxList({
   onSubmit,
   ...props
 }) {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [maxSize,] = useState(5);
+  const currentData = data.slice(
+    ((currentPage-1)*maxSize),
+    (currentPage*maxSize)
+  )
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -52,7 +60,7 @@ function CheckboxList({
         </button>
       </form>
       <ul className={styles.list}>
-        {data.map((item, key) => 
+        {currentData.map((item, key) => 
           <li key={key}>
             <label>
               <input 
@@ -65,6 +73,11 @@ function CheckboxList({
           </li>
         )}
       </ul>
+      <Pagination 
+        currentPage={currentPage}
+        itemSize={data.length} 
+        maxSize={maxSize} 
+        onClick={setCurrentPage} />
     </div>
   )
 }
