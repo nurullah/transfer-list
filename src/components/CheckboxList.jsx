@@ -36,6 +36,7 @@ function CheckboxList({
       // add id
       data.append('id', Date.now());
       data.append('type', type);
+      data.append('selected', false);
 
       // return to callback
       onSubmit(Object.fromEntries(data));
@@ -66,6 +67,7 @@ function CheckboxList({
           <li key={key}>
             <label>
               <input 
+                name="checks[]"
                 type="checkbox"
                 value={item.name}
                 checked={item.checked}

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 
 // UI
 import styles from './Pagination.module.scss';
@@ -15,6 +15,12 @@ function Pagination({ currentPage, itemSize, maxSize, onClick }) {
       onClick(page);
     }
   }
+
+  useEffect(() => {
+    if (itemSize <= maxSize) {
+      onClick(1);
+    }
+  }, [itemSize, maxSize, onClick]);
 
   if (itemSize <= maxSize) return <Fragment />;
 
