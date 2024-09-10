@@ -1,16 +1,17 @@
 import { useState } from 'react';
-
 import defaultItems from '../data/transfer-items.json';
-import CheckboxList from './CheckboxList';
 
-// UI
-import styles from './TransferList.module.scss';
+// components
+import CheckboxList from './CheckboxList';
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
   ChevronsLeftIcon,
   ChevronsRightIcon
 } from './Icons';
+
+// UI
+import styles from './TransferList.module.scss';
 
 export default function TransferList() {
   const [data, setData] = useState(defaultItems);
@@ -21,7 +22,7 @@ export default function TransferList() {
 
   const addItem = (item) => setData((prev) => [ ...prev, item ]);
 
-  const handleChange = (item) => {
+  const changeItem = (item) => {
     setData(prev => prev.map(prevItem => {
       if (prevItem.id === item.id) {
         return item;
@@ -86,7 +87,7 @@ export default function TransferList() {
         type="source" 
         data={sourceItems} 
         className={styles.source}
-        onChange={handleChange}
+        onChange={changeItem}
         onSubmit={addItem} />
       <div className={styles.switch}>
         <button 
@@ -118,7 +119,7 @@ export default function TransferList() {
         type="target" 
         data={targetItems} 
         className={styles.target}
-        onChange={handleChange}
+        onChange={changeItem}
         onSubmit={addItem} />
     </div>
   )

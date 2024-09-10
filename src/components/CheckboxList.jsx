@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
+// components
+import Pagination from './Pagination';
+import { PlusIcon } from './Icons';
+
 // UI
 import styles from './CheckboxList.module.scss';
-import { PlusIcon } from './Icons';
-import Pagination from './Pagination';
 
 function CheckboxList({
   data,

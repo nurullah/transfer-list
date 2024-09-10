@@ -28,6 +28,15 @@
     font-weight: 600;
     padding: .5rem 1rem;
 
+    // responsive
+    @media screen and (max-width: 768px) {
+      padding: .5rem;
+      svg {
+        height: 15px;
+        width: 15px;
+      }
+    }
+
     &:hover:not(:disabled) {
       border-color: #aaa;
     }
