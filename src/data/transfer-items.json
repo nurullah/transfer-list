@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1725940572448",
+    "name": "JS",
+    "type": "source",
+    "checked": false
+  },
+  {
+    "id": "1725940576634",
+    "name": "HTML",
+    "type": "source",
+    "checked": false
+  },
+  {
+    "id": "1725940578522",
+    "name": "CSS",
+    "type": "source",
+    "checked": false
+  },
+  {
+    "id": "1725940579509",
+    "name": "TS",
+    "type": "source",
+    "checked": false
+  },
+  {
+    "id": "1725940581883",
+    "name": "REACT",
+    "type": "target",
+    "checked": false
+  },
+  {
+    "id": "1725940586285",
+    "name": "Angular",
+    "type": "target",
+    "checked": false
+  },
+  {
+    "name": "Vue",
+    "id": "1725940589237",
+    "type": "target",
+    "checked": false
+  },
+  {
+    "id": "1725940590953",
+    "name": "Svelte",
+    "type": "target",
+    "checked": false
+  }
+]

@@ -1,0 +1,46 @@
+.self {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+  overflow: hidden;
+  display: flex;
+}
+
+.source {
+  flex: 40%;
+}
+
+.switch {
+  border-color: transparent #eee;
+  border-style: none solid;
+  border-width: 0 1px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+
+  button {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    padding: .5rem 1rem;
+
+    &:hover:not(:disabled) {
+      border-color: #aaa;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    // space
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.target {
+  flex: 40%;
+}

@@ -1,0 +1,52 @@
+.self {
+  padding: 1rem;
+}
+
+.list {
+  list-style-type: none;
+  list-style-position: unset;
+  margin: 0;
+  padding: 0;
+
+  li {
+    label {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 2px 0;
+      user-select: none;
+
+      input {
+        margin: 0 6px 0 0;
+      }
+    }
+  }
+}
+
+.form {
+  display: flex;
+  margin-bottom: 5px;
+
+  input {
+    border: 1px solid #dadada;
+    // margin-right: 5px;
+    outline: none;
+    padding: 5px 8px;
+    width: 100%;
+
+    &:focus {
+      border-color: #000;
+      + button {
+        border-color: #000;
+      }
+    }
+  }
+  
+  button {
+    background: #fff;
+    border: 1px solid #dadada;
+    border-left: 0;
+    cursor: pointer;
+    margin-left: -1px;
+  }
+}
