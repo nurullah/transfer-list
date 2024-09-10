@@ -5,6 +5,12 @@ import CheckboxList from './CheckboxList';
 
 // UI
 import styles from './TransferList.module.scss';
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  ChevronsLeftIcon,
+  ChevronsRightIcon
+} from './Icons';
 
 export default function TransferList() {
   const [data, setData] = useState(defaultItems);
@@ -86,19 +92,27 @@ export default function TransferList() {
         <button 
           title="Transfer all items into source"
           onClick={handleTransferAllTargetItems}
-          disabled={! targetItems.length}>&laquo;</button>
+          disabled={! targetItems.length}>
+            <ChevronsLeftIcon />
+          </button>
         <button 
           title="Transfer items into Source"
           onClick={handleTransferTargetItems}
-          disabled={! checkedTargetItems.length}>&lsaquo;</button>
+          disabled={! checkedTargetItems.length}>
+            <ChevronLeftIcon />
+          </button>
         <button 
           title="Transfer items into Target"
           onClick={handleTransferSourceItems}
-          disabled={! checkedSourceItems.length}>&rsaquo;</button>
+          disabled={! checkedSourceItems.length}>
+            <ChevronRightIcon />
+          </button>
         <button 
           title="Transfer all items into target"
           onClick={handleTransferAllSourceItems}
-          disabled={! sourceItems.length}>&raquo;</button>
+          disabled={! sourceItems.length}>
+            <ChevronsRightIcon />
+          </button>
       </div>
       <CheckboxList 
         type="target" 

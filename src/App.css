@@ -39,3 +39,15 @@
 .read-the-docs {
   color: #888;
 } */
+
+.icon-tabler {
+  display: inline-block;
+  line-height: 1em;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  color: currentColor;
+  /* height: 20px;
+  width: 20px; */
+  font-weight: 600;
+}

@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 
 // UI
 import styles from './CheckboxList.module.scss';
+import { PlusIcon } from './Icons';
 
 function CheckboxList({
   data,
@@ -43,10 +44,12 @@ function CheckboxList({
   }
 
   return (
-    <div {...props} className={[styles.self].concat(className).join(' ')}>
+    <div className={[styles.self].concat(className).join(' ')} {...props}>
       <form onSubmit={handleSubmit} className={styles.form}>
         <input type="text" name="name" placeholder={`Add ${type} item...`}/>
-        <button type="submit">+</button>
+        <button type="submit">
+          <PlusIcon />
+        </button>
       </form>
       <ul className={styles.list}>
         {data.map((item, key) => 
